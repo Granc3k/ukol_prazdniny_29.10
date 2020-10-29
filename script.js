@@ -23,21 +23,16 @@ function kvadraticka_rce() {
 
 function f_posloupnost() {
   let num = document.getElementById("num").valueAsNumber;
-  let sum = "??"
-  let num_1 = 0
-  let num_2 = 1
-  while num <= sum{
-    sum = num_1
-    if 
-
-  } 
-  
+  let vypis = "Posloupnost: 0  ";
+  let sum = 1;
+  let num_1 = 0;
+  let num_2 = 1;
+  while (sum <= num) {
+    vypis = vypis + sum + " ";
+    sum = num_1 + num_2;
+    num_1 = num_2;
+    num_2 = sum; 
+  }
+  document.getElementById("vypis").innerHTML = vypis;
 }
 
-function is_P(c) {
-  for (let d=2; d<=Math.sqrt(c); d++) {
-    if (c % d == 0) {
-      return false;
-    }
-  }
-  return true;
