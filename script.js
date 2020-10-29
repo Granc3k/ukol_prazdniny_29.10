@@ -36,3 +36,12 @@ function f_posloupnost() {
   document.getElementById("vypis").innerHTML = vypis;
 }
 
+function Prvocisla(){
+  document.getElementById("num_p").valueAsNumber;
+  let vypis_p = "";
+  let count = 0;
+  let num = 0;
+  while (count <= num_p) {
+    if 
+  }
+}
