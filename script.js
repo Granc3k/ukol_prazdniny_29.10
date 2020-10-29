@@ -37,11 +37,29 @@ function f_posloupnost() {
 }
 
 function Prvocisla(){
-  document.getElementById("num_p").valueAsNumber;
+  let num_p = document.getElementById("num_p").valueAsNumber;
   let vypis_p = "";
   let count = 0;
-  let num = 0;
+  let num = 1;
   while (count <= num_p) {
-    if 
+    if (je_P(num)){
+      vypis_p = vypis_p + num + " ";
+      num = num + 1;
+      count = count + 1;
+    }
+    else{
+      num = num + 1;
+    }
   }
+  document.getElementById("vypis_p").innerHTML = vypis_p;
+}
+
+
+function je_P(c){
+  for (let d=2; d<=Math.sqrt(c); d++){
+    if (c % d == 0) {
+      return false;
+    }
+  }
+  return true;
 }
